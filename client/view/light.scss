@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+
+$font: "Karla", sans-serif;
+
+.light-off {
+    fill: white;
+}
+
+.light-on {
+    fill: gold;
+}
+
+.light {
+    fill: white;
+}
+
+h1 {
+    color: white;
+    font-family: $font;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    .btn-off,
+    .btn-on {
+        cursor: pointer;
+        width: 10rem;
+        height: 2rem;
+        cursor: pointer;
+        border-style: none;
+        outline: none;
+        border-radius: 6px;
+        color: rgb(0, 0, 0);
+        font-size: 19px;
+        margin: 2rem;
+    }
+    .btn-on {
+        background-color: gold;
+    }
+}
+
+.log-out {
+    cursor: pointer;
+    width: 24rem;
+    height: 2rem;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+    border-radius: 6px;
+    color: rgb(255, 255, 255);
+    font-size: 19px;
+    margin: 2rem;
+    background-color: rgb(66, 66, 243);
+    transition: 0.3s ease-in-out all;
+    &:hover {
+        color: white;
+        background: rgb(38, 5, 221);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+}
