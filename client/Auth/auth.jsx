@@ -32,19 +32,21 @@ export default function AuthenticationRequests() {
     });
 
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/register" element={
-                    <Register 
-                        state={state} 
-                        dispatch={dispatch} 
-                    />
-                } />
-                <Route index path="/login" element={
-                    <Login />
-                } />
-                <Route path="/page" element={<Page />} />
-            </Routes>
-        </BrowserRouter>
+        <React.Fragment>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/register" element={
+                        <Register 
+                            state={state} 
+                            dispatch={dispatch} 
+                        />
+                    } />
+                    <Route index path="/login" element={
+                        <Login />
+                    } />
+                    <Route path="/page" element={<Page />} />
+                </Routes>
+            </BrowserRouter>
+        </React.Fragment>
     );
 }
