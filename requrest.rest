@@ -1,0 +1,19 @@
+
+# POST http://localhost:4000/auth/41v/register
+# Content-Type: application/json
+
+# {
+#     "name": "gani",
+#     "email": "example2@example.com",
+#     "password": "timethere"
+# }
+
+
+
+POST http://localhost:4000/auth/41v/login
+Content-Type: application/json
+
+{
+    "email": "example2@example.com",
+    "password": "timethere"
+}
