@@ -22,7 +22,13 @@ export const login = async (req, res) => {
 };
 
 export const register = async (req, res) => {
-    const user = await SchemaUser.create({ ...req.body });
-    const token = user.createJWT();
-    res.status(StatusCodes.CREATED).json({ user: user.name, token });
+    const email = req.body.email;
+    const checkEmail = await SchemaUser.findOne({ email });
+    if (checkEmail) {
+        res.status(StatusCodes.BAD_REQUEST).json({ mes: "Email already exist!" });
+    } else {
+        const user = await SchemaUser.create({ ...req.body });
+        const token = user.createJWT();
+        res.status(StatusCodes.CREATED).json({ user: user.name, token });
+    }
 };

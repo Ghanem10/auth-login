@@ -1,9 +1,10 @@
 
-import { Unauthorized } from "./error";
+import { Unauthorized } from "./error.js"
 import jwt from "jsonwebtoken";
 
 export default async function authorizeMiddleWare(req, res, next) {
     const AuthorizedHeaders = req.headers.authorization;
+    console.log(AuthorizedHeaders)
     if (!AuthorizedHeaders || !AuthorizedHeaders.startsWith('Auth')){
         throw new Unauthorized('Invalid credentials.');
     }
