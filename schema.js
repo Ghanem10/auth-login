@@ -24,6 +24,34 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: [true, 'Please provide a password!'],
         minlength: 3
+    },
+    github: {
+        id: {
+            type: String
+        },
+        username: {
+            type: String
+        },
+        gittoken: {
+            type: String
+        },
+        gittokenref: {
+            type: String
+        }
+    },
+    google: {
+        id: {
+            type: String
+        },
+        username: {
+            type: String
+        },
+        googletoken: {
+            type: String
+        },
+        googletokenref: {
+            type: String
+        }
     }
 });
 
@@ -34,16 +62,16 @@ UserSchema.pre('save', async function() {
 
 /* create a jwt token and pass it to next middleware */
 UserSchema.methods.createJWT = function () {
-    return jwt
-    .sign({ 
+    const payload = {
         user: { 
             id: this._id,
             user: this.name
-        }}, 
-            process.env.JWT_SECRET
-        ,{ 
-            expiresIn: process.env.JWT_LIFETIME
-        });
+        }
+    }
+    
+    return jwt.sign(payload, process.env.JWT_SECRET, { 
+        expiresIn: process.env.JWT_LIFETIME
+    });
 }
 
 // compare the requested password with original password.
