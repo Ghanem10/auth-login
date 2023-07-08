@@ -8,8 +8,8 @@
 # Code walkthrough
 
   - after setting up your mongoose schema you can start by hashing your password with bcryptjs library.
-      `pre(fc)` is a middleware for hashing before submitting to the DB. Within the fnc you can specify `genSalt(num)` as the number of rounds
-      for the algorithm iteration [see this](https://github.com/dcodeIO/bcrypt.js#readme)
+      `pre(fc)` is a middleware for hashing before submitting to the DB. Within the fnc, you can specify `genSalt(num)`
+      as the number of rounds for the algorithm iteration [see this](https://github.com/dcodeIO/bcrypt.js#readme)
 
         Schema.pre('save', async function() {
             const salt = await bcryptjs.genSalt(10);
