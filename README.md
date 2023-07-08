@@ -29,7 +29,7 @@
         }
 
 
-    - lastly, for comparing the password after making a registry, you can use `comparePassword` from bcryptjs.
+  - lastly, for comparing the password after making a registry, you can use `comparePassword` from bcryptjs.
         this allows you to encode the saved password in the DB and compare it with the current one.
    
           Schema.methods.comparePassword = async function (candatespassword) {
