@@ -41,6 +41,11 @@
 # Installation
 
   - start by cloning the repository into your local environment.
-        
 
+        https://github.com/gani1000/auth-login.git
+
+  - install all the necessary dependencies.
+
+         npm install
+  
 
