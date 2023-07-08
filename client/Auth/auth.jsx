@@ -41,10 +41,10 @@ export default function AuthenticationRequests() {
                             dispatch={dispatch} 
                         />
                     } />
-                    <Route path="/login" element={
+                    <Route path="/" element={
                         <Login />
                     } />
-                    <Route path="/" element={
+                    <Route index path="/login" element={
                         <Login />
                     } />
                     <Route path="/page" element={<Page />} />
