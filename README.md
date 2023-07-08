@@ -16,8 +16,9 @@
             this.password = await bcryptjs.hash(this.password, salt);
         });
 
+
   - then, you need to create a token. You can achieve that by using the JWT method `jwt.sign` to assign the info
-       from the user instance `object(id, name)`, and specifying the secret key. [see this](https://www.npmjs.com/package/jsonwebtoken#jwtsignpayload-secretorprivatekey-options-callback) for more on jwt.
+       from the user instance `object(id, name)`, and specifying the secret key. [see this](https://www.npmjs.com/package/jsonwebtoken#jwtsignpayload-secretorprivatekey-options-callback) for more info on jwt.
   
         UserSchema.methods.createJWT = function () {
           return jwt.sign({ 
