@@ -41,6 +41,9 @@ export default function AuthenticationRequests() {
                             dispatch={dispatch} 
                         />
                     } />
+                    <Route path="/" element={
+                        <Login />
+                    } />
                     <Route index path="/login" element={
                         <Login />
                     } />
