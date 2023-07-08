@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/auth/41v", auth);
-app.use("/page/41v/page", authorizeMiddleWare);
+app.use("/page/41v", auth, authorizeMiddleWare);
 
 const start = async () => {
     try {

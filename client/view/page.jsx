@@ -1,9 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { propsContext } from '../src/context';
 import './light.scss';
 
 export default function Page() {
     const element = useRef(null);
+    const { name } = useContext(propsContext);
+
     let navigate = useNavigate();
 
     function logOut() {
@@ -25,7 +28,7 @@ export default function Page() {
 
     return (
         <>
-            <h1>You're here, turn on the light!</h1>
+            <h1>Hi {name}, turn on the light!</h1>
             <svg ref={element} className="light" height="350px" width="350px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" 
                 viewBox="0 0 489.981 489.981" xmlSpace="preserve">
             <g>

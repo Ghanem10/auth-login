@@ -1,8 +1,9 @@
-import React, { useReducer, useState } from 'react';
+import React, { useReducer } from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import Register from '../logs/register';
 import Login from '../logs/login';
 import Page from '../view/page';
+import Context from '../src/context';
 
 
 export const logs = {
@@ -33,23 +34,25 @@ export default function AuthenticationRequests() {
 
     return (
         <React.Fragment>
-            <BrowserRouter>
-                <Routes>
-                    <Route path="/register" element={
-                        <Register 
-                            state={state} 
-                            dispatch={dispatch} 
-                        />
-                    } />
-                    <Route path="/" element={
-                        <Login />
-                    } />
-                    <Route index path="/login" element={
-                        <Login />
-                    } />
-                    <Route path="/page" element={<Page />} />
-                </Routes>
-            </BrowserRouter>
+            <Context>
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/register" element={
+                            <Register 
+                                state={state} 
+                                dispatch={dispatch} 
+                            />
+                        } />
+                        <Route path="/" element={
+                            <Login />
+                        } />
+                        <Route index path="/login" element={
+                            <Login />
+                        } />
+                        <Route path="/page" element={<Page />} />
+                    </Routes>
+                </BrowserRouter>
+            </Context>
         </React.Fragment>
     );
 }

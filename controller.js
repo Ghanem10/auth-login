@@ -3,6 +3,12 @@ import { StatusCodes } from "http-status-codes";
 import { BadRequest, Unauthorized } from "./error.js";
 import SchemaUser from "./schema.js";
 
+export const getInfoUser = async (req, res) => {
+    const { name, gmail } = req.body;
+    const userData = await SchemaUser.findOne({ gmail });
+    res.status(StatusCodes.OK).json({ name: userData });
+};
+
 export const login = async (req, res) => {
     const { email, password } = req.body;
     if (!email || !password) {
@@ -17,7 +23,7 @@ export const login = async (req, res) => {
         throw new Unauthorized("Password is incorrect!");
     }
     const token = await user.createJWT();
-    const t = `Auth ${token}`;
+    const t = `Bearer ${token}`;
     res.status(StatusCodes.OK).json({ user: user.name, t });
 };
 

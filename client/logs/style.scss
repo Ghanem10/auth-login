@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+
+$font: "Karla", sans-serif;
+
+.container-login {
+    height: 72vh;
+}
+.container-register {
+    height: 60vh;
+}
+
+.container-login,
+.container-register {
+    text-align: center;
+    margin-top: 5rem;
+    max-width: 100%;
+    min-width: 20%;
+    font-family: $font;
+    border-radius: 9px;
+    background-color: rgb(44, 44, 42);
+    padding: 15px;
+
+    .title-login {
+        color: white;
+        max-width: 100%;
+    }
+
+    .title-register {
+        margin-bottom: 2rem;
+        color: white;
+        max-width: 100%;
+    }
+    
+    .name,
+    .email,
+    .password {
+        display: flex;
+        flex-direction: column;
+        margin: .6rem;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        span {
+            color: rgb(255, 255, 255);
+            text-align: start;
+            line-height: 1.9rem;
+            font-family: $font;
+            font-size: 17px;  
+        }
+        input {
+            height: 1.6rem;
+            border-style: none;
+            outline: none;
+            color: white;
+            border-bottom: 1px solid white;
+            background-color: transparent;
+        }
+        ::placeholder {
+            color: rgba(226, 218, 218, 0.705);
+            font-family: $font;
+            font-size: 15px;
+        }
+    }
+
+    .btn-login,
+    .btn-register {
+        cursor: pointer;
+        width: 24rem;
+        height: 2rem;
+        margin-top: 1.8rem;
+        cursor: pointer;
+        border-style: none;
+        outline: none;
+        border-radius: 6px;
+        color: white;
+        font-family: $font;
+        font-size: 15px;
+        background-color: rgb(66, 66, 243);
+        transition: 0.3s ease-in-out all;
+        &:hover {
+            color: white;
+            background: rgb(38, 5, 221);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+    }
+    .link-register {
+        margin-top: 1.5rem;
+        color: rgb(194, 191, 191);
+        a {
+            color: rgb(255, 97, 97);
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }      
+    }
+
+    .social-provider {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+        gap: 30px;
+        #git, #google {
+            color: white;
+        }
+
+        .github, 
+        .google {
+            width: 9rem;
+            height: 1.8rem;
+            cursor: pointer;
+            border-style: none;
+            outline: none;
+            margin-top: 17px;
+            border-radius: 6px;
+            font-family: $font;
+            color: rgb(255, 255, 255);
+            font-size: 17px;
+            transition: 0.3s ease-in-out all;
+        }
+
+        .github {
+            background-color: rgb(24, 22, 22);
+            &:hover {
+                background: rgb(39, 35, 35);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            }
+        } 
+        .google {
+            background-color: rgb(219, 27, 27);
+            &:hover {
+                background: rgb(177, 12, 6);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            }
+        }
+    }
+}
