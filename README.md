@@ -1,4 +1,4 @@
-[![event parameter](https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/badge.svg?event=push)](https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/badge.svg?event=push&link=https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo/runs)
+[![event parameter]([https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/badge.svg?event=push)](https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/badge.svg?event=push&link=https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo/runs](https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/badge.svg?event=push&link=https://github.com/gani1000/auth-login))
 
 # Authentication-login
 
