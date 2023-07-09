@@ -5,11 +5,12 @@ import { Strategy as GoogleStrategy } from "passport-google-oauth2";
 import SchemaUser from "./schema.js";
 config();
 
-passport.use(new GoogleStrategy(
+const GoogleAuth = new GoogleStrategy(
     {
         clientID: process.env.GOOGLE_ID,
         clientSecret: process.env.GOOGLE_SECRET,
         callbackURL: process.env.GOOGLE_URL,
+        scope: ['profile']
     },
     async (accessToken, refreshToken, profile, done) => {
         let user = await SchemaUser.findOne({ "google.id": profile.id });
@@ -38,6 +39,6 @@ passport.use(new GoogleStrategy(
             return done(error);
         }
     }
-));
+);
 
-export default passport;
+export default GoogleAuth;

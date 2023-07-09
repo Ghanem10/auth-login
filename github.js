@@ -1,10 +1,9 @@
 import { config } from 'dotenv';
-import passport from 'passport';
 import { Strategy as GithubStrategy } from 'passport-github';
 import SchemaUser from './schema.js';
 config();
 
-passport.use(new GithubStrategy(
+const GitHubAuth = new GithubStrategy(
     {
         clientID: process.env.GITHUB_ID, 
         clientSecret: process.env.GITHUB_SECRET,
@@ -37,6 +36,8 @@ passport.use(new GithubStrategy(
             return done(error);
         }
     }
-));
+);
 
-export default passport;
+
+
+export default GitHubAuth;
