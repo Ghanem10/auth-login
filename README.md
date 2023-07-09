@@ -63,7 +63,7 @@
               }
         );
 
-    - In server.js, initialize and configure a session middleware in Express.js using `app.use(session({})` from express-session.
+- In server.js, initialize and configure a session middleware in Express.js using `app.use(session({})` from express-session.
          This allows you to create a session object for each user and store session data on the server, that can be utilized later.
 
             app.use(session({
@@ -72,12 +72,12 @@
                 saveUninitialized: true,
             }));
 
-    - `passport.use(GoogleAuth)` Here we register a Passport strategy for Google authentication.
+- `passport.use(GoogleAuth)` Here we register a Passport strategy for Google authentication.
           And let Passport use the GoogleAuth strategy when authenticating users with Google.
 
             passport.use(GoogleAuth);
 
-    - Then, we need a router to initiate the authentication process. passport in this case, invokes this
+- Then, we need a router to initiate the authentication process. passport in this case, invokes this
           route and redirect the user to the authentication page.
 
            app.get('/auth/google', passport.authenticate('google'));
