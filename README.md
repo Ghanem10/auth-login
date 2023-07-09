@@ -1,4 +1,4 @@
-![branch parameter](https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/badge.svg?branch=feature-1)
+![event parameter](https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/badge.svg??event=push)
 
 # Authentication-login
 
