@@ -1,3 +1,5 @@
+https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/badge.svg
+
 # Authentication-login
 
   - create an account with JSON Web Token and social login providers
