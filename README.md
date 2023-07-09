@@ -38,6 +38,12 @@
               return isMatch;
           } 
 
+# Login providers walkthrough
+  - In the context of authenticating users based on their social providers, we can utilize the `passport.js` package
+      and its plugin strategy to authenticate the middleware in node.js. learn more about [passport.js](https://www.passportjs.org/packages/passport-google-oauth20/).
+    
+
+  - 
 
 # Installation
 
