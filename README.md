@@ -1,4 +1,5 @@
-![event parameter]([https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/badge.svg?event=push)
+![example event parameter](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?event=push)
+
 
 # Authentication-login
 
