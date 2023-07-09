@@ -1,4 +1,4 @@
-![git](https://github.com/gani1000/auth-login/assets/107857762/a595c3c7-94d0-46c8-9abe-0ca15152603c) ![event parameter](https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/badge.svg??event=push)
+![event parameter](https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/badge.svg??event=push)
 
 # Authentication-login
 
