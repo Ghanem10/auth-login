@@ -1,4 +1,4 @@
-![](https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml)
+![](https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/svg)
 
 # Authentication-login
 
