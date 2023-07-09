@@ -1,4 +1,4 @@
-![](https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/svg)
+![branch parameter](https://github.com/gani1000/auth-login/actions/workflows/github-actions-demo.yml/badge.svg?branch=feature-1)
 
 # Authentication-login
 
